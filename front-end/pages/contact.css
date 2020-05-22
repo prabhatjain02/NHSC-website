@@ -1,0 +1,28 @@
+.card-custom {
+    width: 20em;
+    margin: 2px auto;
+    box-sizing: border-box;
+    transition: all 400ms;
+}
+
+.card-custom .card-body {
+    background: aliceblue;
+}
+
+.card-custom .card-body .card-title {
+    text-align: center;
+}
+
+.card-custom .card-body .card-subtitle {
+    text-align: center;
+}
+
+.card-custom img {
+    height: 265px;
+} 
+
+.card-custom:hover {
+    /* bottom: 0.4em; */
+    box-shadow: 3px 5px 10px rgba(0, 10, 10, .5);
+    transform: translate(-1px,-1px);
+}

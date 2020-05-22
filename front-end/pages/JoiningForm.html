@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>राष्ट्रीय मानव सुरक्षा परिषद, भारत</title>
+    <link rel="icon" href=" ../pics/logo.png" type="image/png">
+    <link rel="stylesheet" href="HeadFoot.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        button[data-target="#myModal"] {
+            transform-origin: 50% 50%;
+            transform: translateX(0);
+            animation: slide 1.5s 1;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+        }
+
+        input[type="submit"] {
+            margin: 0 auto;
+        }
+
+        ::placeholder {
+            color: red;
+        }
+
+        label {
+            color: rgb(81, 255, 0);
+            font-weight: 500;
+        }
+
+        .join-us p {
+            animation: appear 4s;
+        }
+
+        .modal-title {
+            width: 100%;
+            font-weight: 700;
+            text-align: center;
+            color: orangered;
+            padding: .25em;
+            border-bottom: .2em solid orangered;
+        }
+
+        .modal-body .row:nth-last-child(1) {
+            margin: 0em;
+            padding: 1em;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+        }
+
+        .modal .row {
+            margin: .5em .2em;
+        }
+
+        .join-us {
+            background-image: linear-gradient(0deg, whitesmoke , transparent);
+        }
+
+        .join-us .row {
+            margin: .6em;
+        }
+
+        .join-us img {
+            max-width: inherit;
+            position: absolute;
+            right: 0em;
+        }
+
+        .join-us h2 {
+            text-transform: uppercase;
+            /* font-style: italic; */
+            font-weight: bolder;
+            color: black;
+            -webkit-text-fill-color: ivory; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+        }
+
+        .about-content {
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: .25rem;
+            /* color: purple;
+            -webkit-text-fill-color: ivory;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black; */
+            height: 400px;
+            background-repeat: no-repeat;
+            background-image: url(https://picsum.photos/0/800/?blur=2);
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 1000px) {
+            .join-us {
+                background-image: url("../pics/logo.png");
+                background-position: center;
+            }
+
+            .join-us .col-4 {
+                display: none;
+            }
+        }
+
+        .about-content p {
+            background-color: rgba(255, 255, 240, 0.562);
+            border: 3px solid ivory;
+            padding: 1rem;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateX(-100vw);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0vw);
+            }
+        }
+        @keyframes appear {
+            from {
+                opacity: 0;
+                visibility: hidden;
+            }
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    </style>
+  </head>
+<body style="background-color: rgb(255,252,199)">
+<header class="header">
+  <script>
+    $('.header').load('./Header.html')
+  </script>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <a class="navbar-brand" href="#">NHSC</a> -->
+  <script>
+    $('.navbar').load('./Navbar.html')  
+  </script>
+</nav>
+<div class="join-us">
+    <div class="row">
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <h2>Join the movement!</h2>
+            </div>
+            <div class="row">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti fuga dignissimos quam dolorum soluta inventore illum eos reprehenderit similique quia maxime nemo iste, sit vitae vero blanditiis quibusdam? Optio expedita dignissimos eveniet. Expedita earum aliquid voluptas ullam ipsum tempora suscipit temporibus quos velit vitae fugiat, consequuntur, nobis provident doloremque?
+                </p>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="../pics/logo.png" alt="join-us-img">
+        </div>
+    </div>
+</div>
+    <!-- modal-open -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Joining Form
+    </button> -->
+    
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form action="http://127.0.0.1:8000/api/joining/" class="needs-validation" novalidate method="POST" enctype="multipart/form-data">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Joining Form</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="mobileNumber">Mobile Number:</label>
+                                <input type="tel" name="mobile" class="form-control" maxlength="10" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="userPhoto">Upload Your Photo</label>
+                                <input type="file" name="profile_image" accept="image/*" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="date">Date</label>
+                                <input type="date" name="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="aadharNumber">Aadhar Card Number:</label>
+                                <input type="tel" name="aadhar_number" class="form-control" maxlength="10" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="aadharUpload">Upload Aadhar Card</label>
+                                <input type="file" name="aadhar_image" accept="image/*" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="about">About</label>
+                                <textarea name="about" cols="30" rows="10" class="form-control" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="recaptcha">recaptchagoes here!</div>
+                        </div>
+                    </div>
+                
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="about-content">
+        <!-- <p>SWIPE UP!!!</p> -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Joining Form
+        </button>
+    </div>
+    <div class="about-para">
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nesciunt natus totam facilis cupiditate animi eveniet iste officia nemo facere saepe nulla sit vel, voluptate dolores modi excepturi quibusdam, ea consectetur laboriosam. Pariatur quia, commodi velit harum expedita quas dignissimos, explicabo maiores ipsam totam porro magnam beatae consequatur, repudiandae accusamus natus! Quod fuga ex iste accusamus excepturi sunt commodi magnam dolores odit sit facilis, ducimus suscipit laudantium maxime, deserunt odio enim fugiat! Iure amet dolores eaque molestiae similique fugiat adipisci magnam aliquam natus illo commodi tempora a voluptatibus, qui, quas reprehenderit alias nemo laboriosam obcaecati deserunt dicta! Molestias tempore laudantium ipsam rem, minus ullam id eius amet saepe fugit, sed excepturi quis repellendus aperiam nisi molestiae! Obcaecati molestias nostrum nulla iusto unde dolorum aut sapiente minima repellendus rem deleniti voluptatibus quia sunt optio doloribus sit atque officiis, consequuntur possimus in tempore eum cum culpa. Neque, dolorum fugit vitae, vel laboriosam accusamus aut similique odit voluptatibus quia nulla dolorem cupiditate ipsum quisquam eos aperiam quo et esse, voluptas molestiae rerum ullam laborum beatae? Aliquam animi dicta dignissimos, quasi praesentium adipisci obcaecati, tenetur cupiditate nihil officiis molestiae eos, saepe id! Obcaecati veniam, harum ipsa nostrum praesentium aliquam laborum cum amet iusto perspiciatis ad, saepe voluptatibus mollitia. Perferendis voluptate labore architecto cumque totam laboriosam maxime minima repellendus illo facilis. Incidunt molestiae illum sapiente eligendi illo exercitationem, tempore magni ratione iste quidem iure commodi ipsum corrupti deserunt. Velit vero exercitationem suscipit animi voluptate porro magnam aut libero provident? Ipsum ipsa, nemo ab molestiae accusantium sequi sit nihil, obcaecati iusto nobis odit velit aperiam possimus voluptate placeat perferendis ipsam praesentium ex aliquam nesciunt esse totam doloribus officia. Molestiae, repudiandae aliquam enim nemo culpa beatae, corporis quibusdam et iusto provident a voluptates suscipit sit sint. Vero necessitatibus ipsam quisquam, maiores consequuntur modi ea est. Repellendus maxime debitis quae, exercitationem iusto ipsa assumenda ullam, quam dolorem cum saepe modi quia necessitatibus nesciunt temporibus rem expedita! Deleniti, soluta ullam repudiandae ut voluptate repellat quod laudantium natus id, illo mollitia nulla dolorem maiores dolore quia facilis reiciendis accusamus aperiam corporis, laborum autem fugiat? Dignissimos ducimus natus inventore optio eaque quos nisi! Corrupti doloribus ipsam dolore fugiat culpa neque. Quos reiciendis cum sunt, facilis vitae magni nisi placeat libero nemo quis dolor vel? Vel pariatur explicabo, dicta nisi accusamus sapiente reprehenderit! Beatae voluptatibus veniam saepe eaque maxime impedit accusamus itaque ratione magnam dolor eius neque, in explicabo sed? Facere, tenetur.</p>
+    </div>
+    <div class="jumbotron jumbotron-fluid jumbo-grad">
+        <script>
+          $('.jumbo-grad').load('./Footer.html')  
+        </script>
+    </div>
+</body>
+<script src="../js/formValidation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+</html>

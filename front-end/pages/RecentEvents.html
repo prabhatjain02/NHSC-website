@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Events | NHSC</title>
+    <link rel="icon" href=" ../pics/logo.png" type="image/png">
+    <link rel="stylesheet" href="HeadFoot.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+      
+      html::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .event-grid .event-row .event-col div {
+          background-color: rgb(calc(var(--delayed)*20), calc(var(--delayed)*15), calc(var(--delayed)*30));
+          width: 100%;
+          opacity: 0;
+          overflow: hidden;
+          transform: scale(.5);
+          height: 10vmin;
+          animation: fade-in;
+          animation-timing-function: ease-in;
+          animation-duration: 1.6s;
+          animation-delay: calc(var(--delayed)*300ms);
+          animation-fill-mode: forwards;
+          height: inherit;
+      }
+
+      .event-grid img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-in-out;
+      }
+
+      .event-grid img:hover {
+        transform: scale(1.2);
+      }
+
+      .event-grid .event-col div::after {
+        display: block;
+        content: "Event";
+        box-sizing: border-box;
+        border-bottom: 3px solid whitesmoke;
+        position: absolute;
+        bottom: 0;
+        color: whitesmoke;
+        text-align: center;
+        background-color: rgba(0,0,0,.8);
+        padding: 1em 3em;
+        width: inherit;
+    }
+
+      @keyframes fade-in {
+          0% {
+              opacity: 0;
+              transform: translateY(-10px);
+          }
+          50% {
+              opacity: 1;
+              transform: translateY(0) scale(1.5);
+          }
+          100%{
+              opacity: 1;
+              transform: scale(1);
+          }
+      }
+
+      .event-grid {
+        height: 90vh;
+        width: 100vw;
+        overflow-y: scroll;
+        background-image: url('../pics/logo2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .event-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .event-grid .event-row .event-col {
+        height: 30vmax;
+        margin: 1rem auto;
+      }
+    </style>
+  </head>
+<body style="background-color: rgb(255,252,199)">
+<header class="header">
+  <script>
+    $('.header').load('./Header.html')  
+  </script>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <a class="navbar-brand" href="#">NHSC</a> -->
+  <script>
+    $('.navbar').load('./Navbar.html')  
+  </script>
+</nav>
+<div class="container-fluid event-grid">
+  <div class="row event-row">
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:1"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:2"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:3"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:4"><a href="#"><img src="#" alt="div-img"></a></div></div>
+  </div>
+  <div class="row event-row">
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:5"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:6"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:7"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:8"><a href="#"><img src="#" alt="div-img"></a></div></div>
+  </div>
+  <div class="row event-row">
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:9"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:10"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:11"><a href="#"><img src="#" alt="div-img"></a></div></div>
+    <div class=" col-sm-12 col-lg-3 event-col"><div style="--delayed:12"><a href="#"><img src="#" alt="div-img"></a></div></div>
+  </div>
+</div>
+<!-- FOOTER -->
+<div class="jumbotron jumbotron-fluid jumbo-grad">
+  <script>
+    $('.jumbo-grad').load('./Footer.html')  
+  </script>
+  </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+  </body>
+</html>
